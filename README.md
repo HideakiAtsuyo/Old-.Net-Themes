@@ -1,4 +1,4 @@
 # Old .Net Themes
 
 
-C# (charp) & VB (visual basic) thèmes
+C# (charp) & VB (visual basic) themes
