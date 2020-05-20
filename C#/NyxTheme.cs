@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CS_ClassLibraryTester
 {
-  
+
     //Coded by HΛWK
     class NYX_Theme : ThemeContainer154
     {
@@ -34,7 +34,8 @@ namespace CS_ClassLibraryTester
             {
                 H -= 1;
             }
-            else {
+            else
+            {
                 H += 1;
             }
             if (H == 25)
@@ -91,7 +92,7 @@ namespace CS_ClassLibraryTester
                 bg_cblend.Colors[0] = Color.FromArgb(35, 35, 35);
                 bg_cblend.Colors[1] = Color.FromArgb(210, 0, 0);
                 bg_cblend.Colors[2] = Color.FromArgb(35, 35, 35);
-                bg_cblend.Positions = new [] {0,(float)0.6,1 };
+                bg_cblend.Positions = new[] { 0, (float)0.6, 1 };
                 DrawGradient(bg_cblend, new Rectangle(1, H, Width, 75));
                 //Reinforce Borders After Glow
                 G.DrawPolygon(Pens.Black, bTopPoints);
@@ -137,7 +138,7 @@ namespace CS_ClassLibraryTester
             bg_cblend.Colors[0] = Color.FromArgb(150, 10, 10);
             bg_cblend.Colors[1] = Color.FromArgb(90, 10, 10);
             bg_cblend.Colors[2] = Color.FromArgb(120, 10, 10);
-            bg_cblend.Positions = new [] {0,(float)0.6,1 };
+            bg_cblend.Positions = new[] { 0, (float)0.6, 1 };
             DrawGradient(bg_cblend, new Rectangle(1, 1, Width - 2, Height - 2));
             //MouseState
             Point[] backPoints = {
@@ -229,14 +230,14 @@ namespace CS_ClassLibraryTester
             bg_cblend.Colors[0] = Color.FromArgb(20, 20, 20);
             bg_cblend.Colors[1] = Color.FromArgb(15, 15, 15);
             bg_cblend.Colors[2] = Color.FromArgb(20, 20, 20);
-            bg_cblend.Positions = new [] {0,(float)0.5,1};
+            bg_cblend.Positions = new[] { 0, (float)0.5, 1 };
             DrawGradient(bg_cblend, new Rectangle(1, 1, Width - 2, Height - 2));
             //Bar
             ColorBlend bar_cblend = new ColorBlend(3);
             bar_cblend.Colors[0] = Color.FromArgb(210, 10, 10);
             bar_cblend.Colors[1] = Color.FromArgb(120, 10, 10);
             bar_cblend.Colors[2] = Color.FromArgb(165, 10, 10);
-            bar_cblend.Positions = new[] {0,(float)0.5,	1 };
+            bar_cblend.Positions = new[] { 0, (float)0.5, 1 };
             DrawGradient(bar_cblend, new Rectangle(1, 1, Convert.ToInt32(((Width / _Maximum) * _Value) - 2), Height - 2));
             //Border
             Point[] borderPoints = {
@@ -286,7 +287,8 @@ namespace CS_ClassLibraryTester
             {
                 x += 1;
             }
-            else {
+            else
+            {
                 x -= 1;
             }
             if (x >= this.Width - 1)
@@ -338,7 +340,7 @@ namespace CS_ClassLibraryTester
                 text_cblend.Colors[0] = Color.FromArgb(15, 15, 15);
                 text_cblend.Colors[1] = Color.FromArgb(150, 0, 0);
                 text_cblend.Colors[2] = Color.FromArgb(15, 15, 15);
-                text_cblend.Positions = new[] {0,(float) 0.5,(float)1.0};
+                text_cblend.Positions = new[] { 0, (float)0.5, (float)1.0 };
                 DrawGradient(text_cblend, glowRect, 0f);
                 //Reinforce Borders
                 G.DrawPolygon(Pens.Black, borderPoints);
@@ -384,7 +386,8 @@ namespace CS_ClassLibraryTester
             {
                 FindForm().WindowState = FormWindowState.Minimized;
             }
-            else {
+            else
+            {
                 FindForm().Close();
             }
         }
@@ -426,9 +429,9 @@ namespace CS_ClassLibraryTester
                     break;
             }
             //OuterRects
-            G.DrawRectangles(Pens.Black,new [] {minRect,xRect});
+            G.DrawRectangles(Pens.Black, new[] { minRect, xRect });
             //Characters
-            G.DrawString("0", new Font("Marlett", (float)8.25,FontStyle.Regular), Brushes.White, new Point(5, 5));
+            G.DrawString("0", new Font("Marlett", (float)8.25, FontStyle.Regular), Brushes.White, new Point(5, 5));
             G.DrawString("r", new Font("Marlett", 10), Brushes.White, new Point(26, 4));
         }
     }
@@ -488,12 +491,12 @@ namespace CS_ClassLibraryTester
             checked_cblend.Colors[0] = Color.FromArgb(90, 0, 0);
             checked_cblend.Colors[1] = Color.FromArgb(120, 0, 0);
             checked_cblend.Colors[2] = Color.FromArgb(180, 0, 0);
-            checked_cblend.Positions = new[] {0,(float)0.7,1};
+            checked_cblend.Positions = new[] { 0, (float)0.7, 1 };
             ColorBlend bg_cblend = new ColorBlend(3);
             bg_cblend.Colors[0] = Color.FromArgb(14, 14, 14);
             bg_cblend.Colors[1] = Color.FromArgb(12, 12, 12);
             bg_cblend.Colors[2] = Color.FromArgb(16, 16, 16);
-            bg_cblend.Positions = new[] {0,(float)0.5,1 };
+            bg_cblend.Positions = new[] { 0, (float)0.5, 1 };
             //Checked
             if (_Checked == true)
             {
@@ -501,7 +504,8 @@ namespace CS_ClassLibraryTester
                 G.DrawPolygon(new Pen(new SolidBrush(Color.FromArgb(150, 0, 0))), innerpoints);
                 G.DrawPolygon(Pens.Black, cbPoints);
             }
-            else {
+            else
+            {
                 DrawGradient(bg_cblend, new Rectangle(4, 4, 12, 12), -45f);
                 G.DrawPolygon(Pens.Black, cbPoints);
             }
@@ -621,7 +625,8 @@ namespace CS_ClassLibraryTester
                         LockHeight = 0;
                         Base.Height = Height - 11;
                     }
-                    else {
+                    else
+                    {
                         LockHeight = Base.Height + 11;
                     }
                 }
@@ -683,7 +688,8 @@ namespace CS_ClassLibraryTester
             {
                 Base.Height = Height - 11;
             }
-            else {
+            else
+            {
                 LockHeight = Base.Height + 11;
             }
             Base.TextChanged += OnBaseTextChanged;
@@ -800,7 +806,8 @@ namespace CS_ClassLibraryTester
                         Alignment = StringAlignment.Center
                     });
                 }
-                else {
+                else
+                {
                     Rectangle x2 = new Rectangle(GetTabRect(i).X - 2, GetTabRect(i).Y + 3, GetTabRect(i).Width, GetTabRect(i).Height - 5);
                     LinearGradientBrush G1 = new LinearGradientBrush(x2, Color.FromArgb(30, 30, 30), Color.FromArgb(35, 35, 35), -90f);
                     G.FillRectangle(G1, x2);
@@ -946,7 +953,8 @@ namespace CS_ClassLibraryTester
                 PaintHook();
                 e.Graphics.DrawImage(B, 0, 0);
             }
-            else {
+            else
+            {
                 G = e.Graphics;
                 PaintHook();
             }
@@ -1100,7 +1108,8 @@ namespace CS_ClassLibraryTester
                 {
                     CorrectBounds(new Rectangle(Point.Empty, Parent.Parent.Size));
                 }
-                else {
+                else
+                {
                     CorrectBounds(Screen.FromControl(Parent).WorkingArea);
                 }
             }
@@ -1666,7 +1675,8 @@ namespace CS_ClassLibraryTester
                 B = new Bitmap(Width, Height, PixelFormat.Format32bppPArgb);
                 G = Graphics.FromImage(B);
             }
-            else {
+            else
+            {
                 G = null;
                 B = null;
             }
@@ -1694,7 +1704,8 @@ namespace CS_ClassLibraryTester
             {
                 ThemeShare.AddAnimationCallback(DoAnimation);
             }
-            else {
+            else
+            {
                 ThemeShare.RemoveAnimationCallback(DoAnimation);
             }
         }
@@ -1817,7 +1828,8 @@ namespace CS_ClassLibraryTester
             {
                 B.SetPixel(x, y, c1);
             }
-            else {
+            else
+            {
                 DrawPixelBrush = new SolidBrush(c1);
                 G.FillRectangle(DrawPixelBrush, x, y, 1, 1);
             }
@@ -1862,7 +1874,8 @@ namespace CS_ClassLibraryTester
                 B.SetPixel(x, y + (height - 1), c1);
                 B.SetPixel(x + (width - 1), y + (height - 1), c1);
             }
-            else {
+            else
+            {
                 DrawCornersBrush = new SolidBrush(c1);
                 G.FillRectangle(DrawCornersBrush, x, y, 1, 1);
                 G.FillRectangle(DrawCornersBrush, x + (width - 1), y, 1, 1);
@@ -2097,7 +2110,8 @@ namespace CS_ClassLibraryTester
             {
                 G.FillEllipse(DrawRadialBrush1, r.X + 1, r.Y + 1, r.Width - 3, r.Height - 3);
             }
-            else {
+            else
+            {
                 G.FillEllipse(DrawRadialBrush1, r);
             }
         }
@@ -2227,7 +2241,8 @@ namespace CS_ClassLibraryTester
                 PaintHook();
                 e.Graphics.DrawImage(B, 0, 0);
             }
-            else {
+            else
+            {
                 G = e.Graphics;
                 PaintHook();
             }
@@ -2397,7 +2412,8 @@ namespace CS_ClassLibraryTester
                 {
                     _ImageSize = Size.Empty;
                 }
-                else {
+                else
+                {
                     _ImageSize = value.Size;
                 }
 
@@ -2613,7 +2629,8 @@ namespace CS_ClassLibraryTester
             {
                 ThemeShare.AddAnimationCallback(DoAnimation);
             }
-            else {
+            else
+            {
                 ThemeShare.RemoveAnimationCallback(DoAnimation);
             }
         }
@@ -2730,7 +2747,8 @@ namespace CS_ClassLibraryTester
             {
                 B.SetPixel(x, y, c1);
             }
-            else {
+            else
+            {
                 DrawPixelBrush = new SolidBrush(c1);
                 G.FillRectangle(DrawPixelBrush, x, y, 1, 1);
             }
@@ -2775,7 +2793,8 @@ namespace CS_ClassLibraryTester
                 B.SetPixel(x, y + (height - 1), c1);
                 B.SetPixel(x + (width - 1), y + (height - 1), c1);
             }
-            else {
+            else
+            {
                 DrawCornersBrush = new SolidBrush(c1);
                 G.FillRectangle(DrawCornersBrush, x, y, 1, 1);
                 G.FillRectangle(DrawCornersBrush, x + (width - 1), y, 1, 1);
@@ -3010,7 +3029,8 @@ namespace CS_ClassLibraryTester
             {
                 G.FillEllipse(DrawRadialBrush1, r.X + 1, r.Y + 1, r.Width - 3, r.Height - 3);
             }
-            else {
+            else
+            {
                 G.FillEllipse(DrawRadialBrush1, r);
             }
         }
@@ -3106,7 +3126,8 @@ namespace CS_ClassLibraryTester
             {
                 ThemeTimer.Delete();
             }
-            else {
+            else
+            {
                 ThemeTimer.Create(0, Rate, HandleCallbacks);
             }
         }
